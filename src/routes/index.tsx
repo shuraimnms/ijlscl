@@ -146,6 +146,9 @@ function Home() {
               <div className="w-2 h-2 bg-[#94a3b8]"></div>
             </div>
             
+            <div className="text-[11.5px] md:text-[13px] font-bold tracking-[0.15em] text-white/90 uppercase mb-4 leading-relaxed">
+              International Journal of Legal Studies and Contemporary Law
+            </div>
             <h1 className="font-serif text-4xl md:text-[42px] font-bold leading-[1.1] text-white mb-4">
               Legal Studies, <br />
               <span className="text-[#94a3b8]">Justice, Contemporary Law</span> <br />
