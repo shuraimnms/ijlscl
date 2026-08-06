@@ -6,7 +6,11 @@ export const Route = createFileRoute("/most-viewed")({
   head: () => ({
     meta: [
       { title: "Most Viewed Papers — IJLSCL" },
-      { name: "description", content: "The most-read IJLSCL articles across all volumes, ranked by verified reader views." },
+      {
+        name: "description",
+        content:
+          "The most-read IJLSCL articles across all volumes, ranked by verified reader views.",
+      },
       { property: "og:title", content: "Most Viewed Papers — IJLSCL" },
       { property: "og:description", content: "Top-read research from IJLSCL." },
     ],

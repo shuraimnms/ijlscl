@@ -9,9 +9,17 @@ export const Route = createFileRoute("/open-access-policy")({
   head: () => ({
     meta: [
       { title: "Open Access Policy — IJLSCL" },
-      { name: "description", content: "IJLSCL provides open access to published content to promote wider dissemination of academic knowledge." },
+      {
+        name: "description",
+        content:
+          "IJLSCL provides open access to published content to promote wider dissemination of academic knowledge.",
+      },
       { property: "og:title", content: "Open Access Policy — IJLSCL" },
-      { property: "og:description", content: "Open access statement, user and author responsibilities, and archiving policy of IJLSCL." },
+      {
+        property: "og:description",
+        content:
+          "Open access statement, user and author responsibilities, and archiving policy of IJLSCL.",
+      },
     ],
     links: [{ rel: "canonical", href: "/open-access-policy" }],
   }),
@@ -52,7 +60,9 @@ function OpenAccess() {
             </div>
             <h3 className="mt-4 font-serif text-lg font-semibold">Open access statement</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Readers may access published articles for legitimate academic, educational, research, and professional purposes, subject to the journal's copyright and licensing conditions.
+              Readers may access published articles for legitimate academic, educational, research,
+              and professional purposes, subject to the journal's copyright and licensing
+              conditions.
             </p>
           </article>
           <article className="rounded-xl border border-border bg-card p-6">
@@ -61,7 +71,9 @@ function OpenAccess() {
             </div>
             <h3 className="mt-4 font-serif text-lg font-semibold">Why open access</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Open access helps researchers, academicians, students, practitioners, professionals, policy makers, and institutions access scholarly information without subscription barriers.
+              Open access helps researchers, academicians, students, practitioners, professionals,
+              policy makers, and institutions access scholarly information without subscription
+              barriers.
             </p>
           </article>
           <article className="rounded-xl border border-border bg-card p-6">
@@ -70,7 +82,9 @@ function OpenAccess() {
             </div>
             <h3 className="mt-4 font-serif text-lg font-semibold">Access & archiving</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Published articles may be made available through the journal website and other approved academic, digital, archival, or indexing platforms in accordance with the journal's copyright and dissemination policy.
+              Published articles may be made available through the journal website and other
+              approved academic, digital, archival, or indexing platforms in accordance with the
+              journal's copyright and dissemination policy.
             </p>
           </article>
         </section>
@@ -110,7 +124,9 @@ function OpenAccess() {
             <div>
               <div className="font-serif text-lg font-semibold">Licence notice</div>
               <p className="mt-1 text-sm text-muted-foreground">
-                IJLSCL follows open access. A specific Creative Commons licence has not yet been formally adopted by the journal administration. Until adoption, no CC BY, CC BY-NC, or other licence badge is displayed on published articles.
+                IJLSCL follows open access. A specific Creative Commons licence has not yet been
+                formally adopted by the journal administration. Until adoption, no CC BY, CC BY-NC,
+                or other licence badge is displayed on published articles.
               </p>
             </div>
           </div>

@@ -1,5 +1,15 @@
 import { useState } from "react";
-import { MessageCircle, X, Phone, Facebook, Twitter, Instagram, Linkedin, Send, Bot } from "lucide-react";
+import {
+  MessageCircle,
+  X,
+  Phone,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Send,
+  Bot,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { JOURNAL } from "@/lib/journal";
 
@@ -10,7 +20,12 @@ const SOCIALS = [
   { label: "Facebook", href: "https://facebook.com/ijlscl", icon: Facebook, color: "#1877F2" },
   { label: "Instagram", href: "https://instagram.com/ijlscl", icon: Instagram, color: "#E4405F" },
   { label: "Twitter / X", href: "https://twitter.com/ijlscl", icon: Twitter, color: "#0f1419" },
-  { label: "LinkedIn", href: "https://linkedin.com/company/ijlscl", icon: Linkedin, color: "#0A66C2" },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/company/ijlscl",
+    icon: Linkedin,
+    color: "#0A66C2",
+  },
 ];
 
 type Msg = { from: "bot" | "me"; text: string };
@@ -36,7 +51,10 @@ const ANSWERS: Record<string, string> = {
 export function FloatingSocial() {
   const [chatOpen, setChatOpen] = useState(false);
   const [msgs, setMsgs] = useState<Msg[]>([
-    { from: "bot", text: `Hi! I'm the ${JOURNAL.short} assistant. Ask a question or pick one below.` },
+    {
+      from: "bot",
+      text: `Hi! I'm the ${JOURNAL.short} assistant. Ask a question or pick one below.`,
+    },
   ]);
   const [input, setInput] = useState("");
 

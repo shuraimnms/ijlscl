@@ -1,12 +1,15 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 const REPLACEMENTS = [
-  { from: /IJARCM/g, to: 'IJLSCL' },
-  { from: /ijarcm/g, to: 'ijlscl' },
-  { from: /International Journal of Academic Research in Commerce & Management/g, to: 'International Journal of Legal Studies and Contemporary Law' },
-  { from: /Commerce & Management/g, to: 'Legal Studies and Contemporary Law' },
-  { from: /Commerce \& Management/g, to: 'Legal Studies and Contemporary Law' }
+  { from: /IJARCM/g, to: "IJLSCL" },
+  { from: /ijarcm/g, to: "ijlscl" },
+  {
+    from: /International Journal of Academic Research in Commerce & Management/g,
+    to: "International Journal of Legal Studies and Contemporary Law",
+  },
+  { from: /Commerce & Management/g, to: "Legal Studies and Contemporary Law" },
+  { from: /Commerce \& Management/g, to: "Legal Studies and Contemporary Law" },
 ];
 
 function processDirectory(dirPath) {
@@ -18,8 +21,14 @@ function processDirectory(dirPath) {
 
     if (stat.isDirectory()) {
       processDirectory(fullPath);
-    } else if (stat.isFile() && (fullPath.endsWith('.ts') || fullPath.endsWith('.tsx') || fullPath.endsWith('.css') || fullPath.endsWith('.json'))) {
-      let content = fs.readFileSync(fullPath, 'utf8');
+    } else if (
+      stat.isFile() &&
+      (fullPath.endsWith(".ts") ||
+        fullPath.endsWith(".tsx") ||
+        fullPath.endsWith(".css") ||
+        fullPath.endsWith(".json"))
+    ) {
+      let content = fs.readFileSync(fullPath, "utf8");
       let original = content;
 
       for (const rep of REPLACEMENTS) {
@@ -27,7 +36,7 @@ function processDirectory(dirPath) {
       }
 
       if (content !== original) {
-        fs.writeFileSync(fullPath, content, 'utf8');
+        fs.writeFileSync(fullPath, content, "utf8");
         console.log(`Updated: ${fullPath}`);
       }
     }
@@ -35,10 +44,7 @@ function processDirectory(dirPath) {
 }
 
 // Target directories
-const targets = [
-  path.join(__dirname, 'src'),
-  path.join(__dirname, 'public')
-];
+const targets = [path.join(__dirname, "src"), path.join(__dirname, "public")];
 
 for (const target of targets) {
   if (fs.existsSync(target)) {
@@ -47,12 +53,12 @@ for (const target of targets) {
 }
 
 // Update package.json name specifically
-const pkgPath = path.join(__dirname, 'package.json');
+const pkgPath = path.join(__dirname, "package.json");
 if (fs.existsSync(pkgPath)) {
-  let pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-  pkg.name = 'ijlscl';
-  fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2), 'utf8');
-  console.log('Updated package.json name');
+  let pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
+  pkg.name = "ijlscl";
+  fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2), "utf8");
+  console.log("Updated package.json name");
 }
 
-console.log('Rebranding complete.');
+console.log("Rebranding complete.");

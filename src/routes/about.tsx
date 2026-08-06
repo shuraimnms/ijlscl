@@ -12,9 +12,17 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About IJLSCL — International Journal of Legal Studies and Contemporary Law" },
-      { name: "description", content: "IJLSCL is an international peer-reviewed open-access journal dedicated to publishing high-quality scholarly research in legal studies, contemporary law, constitutional governance, public policy, legal technology, human rights, judicial reforms, international law, and interdisciplinary legal research that contributes to the advancement of justice and the rule of law worldwide." },
+      {
+        name: "description",
+        content:
+          "IJLSCL is an international peer-reviewed open-access journal dedicated to publishing high-quality scholarly research in legal studies, contemporary law, constitutional governance, public policy, legal technology, human rights, judicial reforms, international law, and interdisciplinary legal research that contributes to the advancement of justice and the rule of law worldwide.",
+      },
       { property: "og:title", content: "About IJLSCL" },
-      { property: "og:description", content: "Peer-reviewed open-access journal in legal studies and contemporary law with external double-blind peer review." },
+      {
+        property: "og:description",
+        content:
+          "Peer-reviewed open-access journal in legal studies and contemporary law with external double-blind peer review.",
+      },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -23,10 +31,26 @@ export const Route = createFileRoute("/about")({
 });
 
 const PILLARS = [
-  { icon: ShieldCheck, title: "Editorial integrity", body: "Confidentiality, impartiality, originality, responsible authorship, and ethical research practices in every editorial decision." },
-  { icon: Users, title: "External double-blind review", body: "Every submission is evaluated through external double-blind peer review by subject-matter reviewers." },
-  { icon: Globe2, title: "International reach", body: "A platform for academicians, researchers, practitioners, and policy makers across regions and disciplines." },
-  { icon: BookOpen, title: "Open access", body: "Freely accessible published content to promote wider dissemination and exchange of academic knowledge." },
+  {
+    icon: ShieldCheck,
+    title: "Editorial integrity",
+    body: "Confidentiality, impartiality, originality, responsible authorship, and ethical research practices in every editorial decision.",
+  },
+  {
+    icon: Users,
+    title: "External double-blind review",
+    body: "Every submission is evaluated through external double-blind peer review by subject-matter reviewers.",
+  },
+  {
+    icon: Globe2,
+    title: "International reach",
+    body: "A platform for academicians, researchers, practitioners, and policy makers across regions and disciplines.",
+  },
+  {
+    icon: BookOpen,
+    title: "Open access",
+    body: "Freely accessible published content to promote wider dissemination and exchange of academic knowledge.",
+  },
 ];
 
 const JOURNAL_DETAILS: [string, string][] = [
@@ -56,11 +80,26 @@ const ACCEPTED_TYPES = [
 ];
 
 const FAQS = [
-  { q: "Is IJLSCL peer-reviewed?", a: "Yes. Every manuscript is evaluated through an external double-blind peer-review process by subject-matter reviewers." },
-  { q: "How often does IJLSCL publish?", a: "IJLSCL normally publishes four regular issues every year — in March, June, September, and December." },
-  { q: "Is there a publication fee?", a: "The applicable publication or processing charges, if any, will be communicated transparently to the corresponding author before final publication. See the Publication Charges page." },
-  { q: "Which subject areas are accepted?", a: "Legal studies, contemporary law, constitutional governance, public policy, legal technology, human rights, judicial reforms, international law, and interdisciplinary legal research. See Focus & Scope." },
-  { q: "What manuscript types are accepted?", a: "Original research, review articles, technical notes, case studies, conceptual and theoretical papers, thesis notes, and book notes." },
+  {
+    q: "Is IJLSCL peer-reviewed?",
+    a: "Yes. Every manuscript is evaluated through an external double-blind peer-review process by subject-matter reviewers.",
+  },
+  {
+    q: "How often does IJLSCL publish?",
+    a: "IJLSCL normally publishes four regular issues every year — in March, June, September, and December.",
+  },
+  {
+    q: "Is there a publication fee?",
+    a: "The applicable publication or processing charges, if any, will be communicated transparently to the corresponding author before final publication. See the Publication Charges page.",
+  },
+  {
+    q: "Which subject areas are accepted?",
+    a: "Legal studies, contemporary law, constitutional governance, public policy, legal technology, human rights, judicial reforms, international law, and interdisciplinary legal research. See Focus & Scope.",
+  },
+  {
+    q: "What manuscript types are accepted?",
+    a: "Original research, review articles, technical notes, case studies, conceptual and theoretical papers, thesis notes, and book notes.",
+  },
 ];
 
 function About() {
@@ -73,8 +112,18 @@ function About() {
         intro="IJLSCL is an international peer-reviewed open-access journal dedicated to publishing high-quality scholarly research in legal studies, contemporary law, constitutional governance, public policy, legal technology, human rights, judicial reforms, international law, and interdisciplinary legal research that contributes to the advancement of justice and the rule of law worldwide."
       >
         <div className="flex flex-wrap gap-3">
-          <Link to="/submit" className="inline-flex h-11 items-center rounded-md bg-brand px-5 text-sm font-semibold text-brand-foreground shadow-elev hover:brightness-110">Submit your paper</Link>
-          <Link to="/aims-scope" className="inline-flex h-11 items-center rounded-md border border-border bg-background px-5 text-sm font-semibold hover:bg-accent">Focus & Scope</Link>
+          <Link
+            to="/submit"
+            className="inline-flex h-11 items-center rounded-md bg-brand px-5 text-sm font-semibold text-brand-foreground shadow-elev hover:brightness-110"
+          >
+            Submit your paper
+          </Link>
+          <Link
+            to="/aims-scope"
+            className="inline-flex h-11 items-center rounded-md border border-border bg-background px-5 text-sm font-semibold hover:bg-accent"
+          >
+            Focus & Scope
+          </Link>
         </div>
       </PageHero>
 
@@ -92,25 +141,43 @@ function About() {
         {/* About narrative */}
         <section className="mt-14 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">Overview</div>
-            <h2 className="mt-2 font-serif text-3xl font-semibold">A platform for academic and professional scholarship</h2>
+            <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">
+              Overview
+            </div>
+            <h2 className="mt-2 font-serif text-3xl font-semibold">
+              A platform for academic and professional scholarship
+            </h2>
             <div className="mt-2 rule-gold" />
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              The journal provides a professional platform for academicians, researchers, teachers, students, industry professionals, managers, entrepreneurs, policy makers, and institutional leaders to communicate research findings, theoretical perspectives, practical experiences, business models, policy analyses, and interdisciplinary developments.
+              The journal provides a professional platform for academicians, researchers, teachers,
+              students, industry professionals, managers, entrepreneurs, policy makers, and
+              institutional leaders to communicate research findings, theoretical perspectives,
+              practical experiences, business models, policy analyses, and interdisciplinary
+              developments.
             </p>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              Manuscripts may be empirical, analytical, conceptual, quantitative, qualitative, or mixed-method, provided they make a meaningful contribution to knowledge, policy, professional practice, management education, or socio-economic development.
+              Manuscripts may be empirical, analytical, conceptual, quantitative, qualitative, or
+              mixed-method, provided they make a meaningful contribution to knowledge, policy,
+              professional practice, management education, or socio-economic development.
             </p>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              All manuscripts submitted to IJLSCL are initially screened by the editorial office for relevance, originality, formatting, plagiarism, language quality, ethical compliance, and adherence to journal guidelines. Manuscripts found suitable are evaluated through an external double-blind peer-review process.
+              All manuscripts submitted to IJLSCL are initially screened by the editorial office for
+              relevance, originality, formatting, plagiarism, language quality, ethical compliance,
+              and adherence to journal guidelines. Manuscripts found suitable are evaluated through
+              an external double-blind peer-review process.
             </p>
           </div>
           <aside className="rounded-2xl border border-border bg-card p-6">
-            <div className="text-xs uppercase tracking-widest text-brand font-semibold">Accepted manuscript categories</div>
+            <div className="text-xs uppercase tracking-widest text-brand font-semibold">
+              Accepted manuscript categories
+            </div>
             <ul className="mt-4 space-y-1.5 text-sm">
               {ACCEPTED_TYPES.map((t) => (
                 <li key={t} className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 flex-none rounded-full" style={{ background: "var(--brand)" }} />
+                  <span
+                    className="mt-1 h-1.5 w-1.5 flex-none rounded-full"
+                    style={{ background: "var(--brand)" }}
+                  />
                   <span>{t}</span>
                 </li>
               ))}
@@ -120,12 +187,17 @@ function About() {
 
         {/* Pillars */}
         <section className="mt-16">
-          <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">Editorial pillars</div>
+          <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">
+            Editorial pillars
+          </div>
           <h2 className="mt-2 font-serif text-3xl font-semibold">What we stand for</h2>
           <div className="mt-2 rule-gold" />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((p) => (
-              <article key={p.title} className="rounded-xl border border-border bg-card p-6 transition hover:border-brand/40 hover:shadow-elev">
+              <article
+                key={p.title}
+                className="rounded-xl border border-border bg-card p-6 transition hover:border-brand/40 hover:shadow-elev"
+              >
                 <div className="flex h-11 w-11 items-center justify-center rounded-md bg-brand-muted text-brand">
                   <p.icon className="h-5 w-5" />
                 </div>
@@ -138,7 +210,9 @@ function About() {
 
         {/* Journal details */}
         <section className="mt-16">
-          <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">Journal details</div>
+          <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">
+            Journal details
+          </div>
           <h2 className="mt-2 font-serif text-3xl font-semibold">At a glance</h2>
           <div className="mt-2 rule-gold" />
           <div className="mt-6 overflow-hidden rounded-xl border border-border bg-card">
@@ -146,7 +220,9 @@ function About() {
               <tbody className="divide-y divide-border">
                 {JOURNAL_DETAILS.map(([k, v]) => (
                   <tr key={k}>
-                    <td className="w-64 bg-secondary/40 px-5 py-3 text-xs uppercase tracking-wider text-muted-foreground">{k}</td>
+                    <td className="w-64 bg-secondary/40 px-5 py-3 text-xs uppercase tracking-wider text-muted-foreground">
+                      {k}
+                    </td>
                     <td className="px-5 py-3 font-medium">{v}</td>
                   </tr>
                 ))}
@@ -157,18 +233,37 @@ function About() {
 
         {/* Indexing preview */}
         <section className="mt-16">
-          <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">Indexing</div>
-          <h2 className="mt-2 font-serif text-3xl font-semibold">Discoverable where researchers work</h2>
+          <div className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">
+            Indexing
+          </div>
+          <h2 className="mt-2 font-serif text-3xl font-semibold">
+            Discoverable where researchers work
+          </h2>
           <div className="mt-2 rule-gold" />
           <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {["Google Scholar", "Crossref", "Dimensions", "ROAD", "BASE", "OpenAlex", "ResearchBib", "Scilit"].map((p) => (
-              <div key={p} className="flex h-16 items-center justify-center rounded-md border border-border bg-card font-serif text-sm text-muted-foreground">
+            {[
+              "Google Scholar",
+              "Crossref",
+              "Dimensions",
+              "ROAD",
+              "BASE",
+              "OpenAlex",
+              "ResearchBib",
+              "Scilit",
+            ].map((p) => (
+              <div
+                key={p}
+                className="flex h-16 items-center justify-center rounded-md border border-border bg-card font-serif text-sm text-muted-foreground"
+              >
                 {p}
               </div>
             ))}
           </div>
           <div className="mt-4">
-            <Link to="/indexing" className="inline-flex items-center gap-1 text-sm text-brand hover:underline">
+            <Link
+              to="/indexing"
+              className="inline-flex items-center gap-1 text-sm text-brand hover:underline"
+            >
               See full indexing coverage <Handshake className="h-4 w-4" />
             </Link>
           </div>
@@ -192,7 +287,15 @@ function About() {
   );
 }
 
-function Stat({ icon: Icon, v, l }: { icon: React.ComponentType<{ className?: string }>; v: number; l: string }) {
+function Stat({
+  icon: Icon,
+  v,
+  l,
+}: {
+  icon: React.ComponentType<{ className?: string }>;
+  v: number;
+  l: string;
+}) {
   return (
     <div className="flex items-center gap-4">
       <div className="flex h-11 w-11 items-center justify-center rounded-md bg-brand-muted text-brand">
