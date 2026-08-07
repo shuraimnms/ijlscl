@@ -7,8 +7,8 @@ export const JOURNAL = {
   short: "IJLSCL",
   tagline:
     "Advancing Global Legal Scholarship, Contemporary Jurisprudence, Governance, and Justice",
-  issn_online: "2395-6410",
-  issn_print: "2455-0116",
+  issn_online: "3117-5201",
+  issn_print: "3117-5198",
   license: "Open Access",
   frequency: "Quarterly",
   founded: 2021,
